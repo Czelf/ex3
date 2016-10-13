@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Rekenmachine</title>
+</head>
+<body>
+<form method="post" action = "/" >
+    <input type="text" name="values" id="values">
+    <input type="submit" value="=">
+    <input type="button" value="1" name="1" onclick="getElementValue(this.value)">
+    <input type="button" value="2" name="2" onclick="getElementValue(this.value)">
+    <input type="button" value="3" name="3" onclick="getElementValue(this.value)">
+    <input type="button" value="4" name="4" onclick="getElementValue(this.value)">
+    <input type="button" value="5" name="5" onclick="getElementValue(this.value)">
+    <input type="button" value="6" name="6" onclick="getElementValue(this.value)">
+    <input type="button" value="7" name="7" onclick="getElementValue(this.value)">
+    <input type="button" value="8" name="8" onclick="getElementValue(this.value)">
+    <input type="button" value="9" name="9" onclick="getElementValue(this.value)">
+    <input type="button" value="-" name="-" onclick="getElementValue(this.value)">
+    <input type="button" value="+" name="+" onclick="getElementValue(this.value)">
+    <input type="button" value="/" name="/" onclick="getElementValue(this.value)">
+    <input type="button" value="*" name="*" onclick="getElementValue(this.value)">
+</form>
+
+<script>
+    var string = "";
+    function getElementValue(val) {
+        console.log(val);
+        string += val;
+        document.getElementById("values").value = string;
+    }
+
+</script>
+</body>
+</html>

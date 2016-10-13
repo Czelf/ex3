@@ -13,19 +13,18 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+// search file in directory
 app.get("/", function (req, res) {
     res.sendFile( __dirname + '/index.html');
+
 });
 
+// request value post method
 app.post("/", function (req, res) {
     var equation = req.body.values;
     var expression = eval(equation);
-    //console.log(equation)
-    //console.log(expression);
-
-    //var regex = /([\+\-\*\/])/;
-    //var  a = equation.split(regex);
-   // console.log(a)
+    console.log(expression);
+    res.send('<h1> The solution is '+  expression + '</h1>');
 
 });
 
